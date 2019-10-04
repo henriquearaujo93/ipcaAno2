@@ -1,0 +1,39 @@
+h2{
+    color: red;
+
+}
+
+h1{
+    color: blue;
+}
+
+li{
+    font-size: 50px;
+}
+
+.centerDiv {
+    width: 100%;
+    margin: 100px 0 0;
+}
+
+form {
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+form label {
+    width: 50%;
+    display: block;
+    font-size: 20px;
+    margin: 0 auto 0px auto;
+}
+
+form input {
+    display: block;
+    margin: 0 auto 20px auto;
+    padding: 8px;
+    width: 50%;
+    text-align: center;
+}
