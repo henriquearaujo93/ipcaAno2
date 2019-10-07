@@ -1,0 +1,51 @@
+.movie {
+    float: left;
+    font-family: Verdana, sans-serif;
+    border: solid 1px #cccccc;
+    box-shadow: 0 4px 20px 0 black;
+    height: 300px;
+    width: 260px;
+    margin: 15px;
+    padding: 5px;
+}
+
+h2 {
+    margin: 15px 0 0 15px;
+}
+
+.movie img {
+    width: 100%;
+    max-height: 50%;
+}
+
+.movie-info {
+    padding: 10px;
+    height: 90px;
+    overflow: hidden;
+}
+
+.movie-info h4 {
+    font-size: 1.4em;
+    font-weight: 100;
+    margin: 0px;
+}
+.movie-spec .rate {
+    float: right;
+    padding: 10px;
+}
+
+.movie-spec .genre {
+    float: left;
+    padding: 20px 0 0 5px;
+}
+
+.genre {
+    color: green;
+    font-weight: bold;
+}
+
+.rate {
+    color: blue;
+    font-weight: bold;
+    font-size: 1.4em;
+}

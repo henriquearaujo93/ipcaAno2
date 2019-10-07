@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;   
+}
+
+body {
+    margin: 0;
+    font-family: 'Oswald', 'sans-serif';
+    background-color: lightgrey;
+}
+
+form {
+    margin: 16px 700px 700px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    display: inline;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #961857;
+    color: white;
+    border-radius: 30px;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}

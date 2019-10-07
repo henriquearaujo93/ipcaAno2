@@ -1,39 +1,104 @@
-h2{
-    color: red;
-
+* {
+    box-sizing: border-box;   
 }
 
-h1{
-    color: blue;
+body {
+    margin: 0;
+    font-family: 'Oswald', 'sans-serif';
+    background-color: lightgrey;
 }
 
-li{
-    font-size: 50px;
+h2 {
+    margin: 15px 0 0 15px;
 }
 
-.centerDiv {
-    width: 100%;
-    margin: 100px 0 0;
+.movie {
+    float: left;
+    border: solid 1px #cccccc;
+    box-shadow: 0 4px 20px 0 black;
+    height: 300px;
+    margin: 13px 13px 13px 13px;;
+    padding: 5px;
 }
 
-form {
-    width: 940px;
-    margin-left: auto;
-    margin-right: auto;
-
+.movie img {
+    float: left;
+    max-height: 100%;
+    margin: 0 13px 0 0;
 }
 
-form label {
-    width: 50%;
-    display: block;
-    font-size: 20px;
-    margin: 0 auto 0px auto;
+.bold {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 110%;
 }
 
-form input {
-    display: block;
-    margin: 0 auto 20px auto;
-    padding: 8px;
-    width: 50%;
-    text-align: center;
+
+.header {
+    background-color: #333333;
+    border-bottom: solid 5px #4faddb;
+    height: 80px;
+    box-sizing: content-box;
+}
+
+.logo {
+    display: inline-block;
+    height: 80px;
+    padding:  15px;
+}
+
+/*
+.logo img {
+    height: 100%;
+}
+*/
+
+.menu {
+    display: inline-block;
+    vertical-align: top;
+    height: 80px;
+    padding: 25px;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: inline;
+}
+
+.header a {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 1.3em;
+    padding: 15px;
+}
+
+.menu a {
+    padding: 15px;
+}
+
+.login {
+    float: right;
+    height: 80px;
+    padding: 25px;
+}
+
+.menu a:hover,
+.menu a.selected {
+    background-color: #4faddb;
+    color: black;
+}
+
+.btnRegister {
+    border-radius: 30px;
+    padding: 10px 25px;
+    margin: 10px;
+}
+
+.contrast {
+    background: #961857;
+    color: white;
 }
