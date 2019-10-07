@@ -9,13 +9,12 @@ body {
 }
 
 form {
-    margin: 16px 700px 700px;
+    margin: 16px 600px 600px;
 }
 
 input {
     width: 100%;
     padding: 12px 20px;
-    display: inline;
     border: 1px solid #cccccc;
     box-sizing: border-box;
 }
