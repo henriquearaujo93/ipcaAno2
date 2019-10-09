@@ -10,25 +10,26 @@
 </head>
 <body>  
     <div class="calculator">
-        <div class="display" name="display">100</div>
-        <button class="button triple" name="AC">AC</button>
-        <button class="button operation" name="/">/</button>
-        <button class="button" name="7">7</button>
-        <button class="button" name="8">8</button>
-        <button class="button" name="9">9</button>
-        <button class="button operation" name="*">*</button>
-        <button class="button" name="4">4</button>
-        <button class="button" name="5">5</button>
-        <button class="button" name="6">6</button>
-        <button class="button operation" name="-">-</button>
-        <button class="button" name="1">1</button>
-        <button class="button" name="2">2</button>
-        <button class="button" name="3">3</button>
-        <button class="button operation" name="+">+</button>
-        <button class="button double" name="0">0</button>
-        <button class="button" name=".">.</button>
-        <button class="button operation" name="=">=</button>        
+        <div id="display" class="display" name="display"></div>
+        <button class="button triple" onClick="clearMemory()" value="AC" name="AC">AC</button>
+        <button class="button operation" onClick="setOperation('/')" id="/" value="/" name="/">/</button>
+        <button class="button" onClick="addDigit('7')" id="7" value="7" name="button">7</button>
+        <button class="button" onClick="addDigit('8')" id="8" value="8" name="8">8</button>
+        <button class="button" onClick="addDigit('9')" id="9" value="9" name="9">9</button>
+        <button class="button operation" onClick="setOperation('*')" id="*" value="*" name="*">*</button>
+        <button class="button" onClick="addDigit('4')" id="4" value="4" name="4">4</button>
+        <button class="button" onClick="addDigit('5')" id="5" value="5" name="5">5</button>
+        <button class="button" onClick="addDigit('6')" id="6" value="6" name="6">6</button>
+        <button class="button operation" onClick="setOperation('-')" id="-" value="-" name="-">-</button>
+        <button class="button" onClick="addDigit('1')" id="1" value="1" name="1">1</button>
+        <button class="button" onClick="addDigit('2')" id="2" value="2" name="2">2</button>
+        <button class="button" onClick="addDigit('3')" id="3" value="3" name="3">3</button>
+        <button class="button operation" onClick="setOperation('+')" id="+" value="+" name="+">+</button>
+        <button class="button double" onClick="addDigit('0')" id="0" value="0" name="0">0</button>
+        <button class="button" onClick="addDigit('.')" id="." value="." name=".">.</button>
+        <button class="button operation" onClick="setOperation('=')" id="=" value="=" name="=">=</button>        
     </div>
 
+    <script src="calculator.js"></script>
 </body>
 </html>
