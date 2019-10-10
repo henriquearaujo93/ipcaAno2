@@ -1,25 +1,43 @@
 const initialState = 0;
-let operation = "";
-let digit = [""];
-let calc = "";
+let arrayDigits = []
 
+let displayCalc = document.querySelector("#display")
 
-document.getElementById("display").innerHTML = initialState
+let displayExp = document.querySelector("#expression")
+
+displayCalc.innerHTML = initialState
 
 function clearMemory() {
     //console.log('Limpar')
-    document.getElementById("display").innerHTML = initialState   
+    displayCalc.innerHTML = initialState
+    arrayDigits = []
+    displayExp.innerHTML = ""   
 }
 
 function setOperation(value) {
     //console.log(operation)
     operation = document.getElementById(value).value
-    console.log(operation)
+    arrayDigits.push(operation)
+    displayExp.innerHTML += operation
+    displayCalc.innerHTML = "" 
 }
 
 function addDigit(value) {
-    //console.log(n)
-    digit = document.getElementById(value).value
-    document.getElementById("display").innerHTML = ""
-    document.getElementById("display").innerHTML += value
+    let digit = document.getElementById(value).value
+    arrayDigits.push(digit)
+    
+    displayExp.innerHTML += digit
+
+    if(displayCalc.innerHTML == initialState)
+    {
+        displayCalc.innerHTML = digit
+    }
+    else
+        displayCalc.innerHTML += digit
+}
+
+function result() {
+    let calcExpression = arrayDigits.join("")
+    let result = eval(calcExpression)
+    displayCalc.innerHTML = result
 }
