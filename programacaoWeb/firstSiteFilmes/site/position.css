@@ -5,7 +5,7 @@ body {
 
 #gameArea {
     margin: 0;
-    background-color:  gray; 
+    background-color: gray;
     width: 80vw;
     height: 37vw;
     margin-left: auto;
@@ -13,22 +13,9 @@ body {
     margin-top: 5vh;
 }
 
- #gameArea img {
+#gameArea img {
     user-select: none;
     width: 15vw;
+    height: 15vw;
     position: absolute;
-}
-
-#img1 {
-    margin-left: 65vw;
-    margin-top: 23vw
-}
-
-#img2 {
-    margin-bottom: 65vw;
-}
-
-#img3 {
-    margin-left: 32vw;
-    margin-top: 12vw;
 }
