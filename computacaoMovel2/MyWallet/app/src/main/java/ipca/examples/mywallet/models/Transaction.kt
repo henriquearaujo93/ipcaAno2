@@ -1,5 +1,6 @@
 package ipca.examples.mywallet.models
 
+import org.json.JSONObject
 import java.io.Serializable
 
 enum class TransactionType(val value: String)
@@ -24,5 +25,15 @@ class Transaction : Serializable {
         this.amount = amount
         this.type = type
         this.description = description
+    }
+
+    fun toJson () : JSONObject {
+        val jsonObject = JSONObject()
+        jsonObject.put("id"             , id         )
+        jsonObject.put("date"           , dateTime   )
+        jsonObject.put("amount"         , amount     )
+        jsonObject.put("type"           , type       )
+        jsonObject.put("description"    , description)
+        return jsonObject
     }
 }

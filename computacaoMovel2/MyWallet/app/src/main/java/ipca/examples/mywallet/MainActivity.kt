@@ -9,6 +9,7 @@ import android.widget.BaseAdapter
 import android.widget.TextView
 import ipca.examples.mywallet.models.Transaction
 import ipca.examples.mywallet.models.TransactionType
+import kotlinx.android.synthetic.main.activity_item.*
 
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*

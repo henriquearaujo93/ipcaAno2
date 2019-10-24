@@ -1,0 +1,39 @@
+body{
+    background: gray;
+}
+
+#beyblade1 {
+    display: block;
+    transition-duration: 1s;
+    width: 200px;
+    height: 200px;
+    animation-iteration-count: infinite;
+    animation-duration: 15ms;
+    animation-timing-function: linear;
+    animation-name: rotateMe;
+
+}
+
+#beyblade2 {
+    display: block;
+    transition-duration: 1s;
+    width: 200px;
+    height: 200px;
+    animation-iteration-count: infinite;
+    animation-duration: 15ms;
+    animation-timing-function: linear;
+    animation-name: rotateMe;
+    position: relative;
+    left: 82vw;
+    top: 15vw
+}
+
+@keyframes rotateMe {
+    form {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

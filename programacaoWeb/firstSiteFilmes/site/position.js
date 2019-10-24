@@ -1,20 +1,10 @@
-/*
-var cheeseCake = document.getElementById("img1")
-var cake = document.getElementById("img2")
-var sugarPlam = document.getElementById("img3")
+var randomImg = ""
 
-var allImages = [cheeseCake, cake, sugarPlam]
-
-function ClickImage(){
-    cheeseCake.parentNode.removeChild(img1)
-}
-*/
-
-var click = false
-
-var imgName = ""
+var clickOut = false
 
 var points = 0
+
+var imgName = ""
 
 var img = document.getElementsByTagName("img")
 
@@ -38,12 +28,6 @@ var imgsWidth = imgs[0].clientWidth
 var gameAreaMargin = window.getComputedStyle(gameArea).getPropertyValue("margin-left")
 gameAreaMargin = gameAreaMargin.match(/\d+/)[0]
 
-function randomImg(img) {
-
-    return img[Math.floor(Math.random() * img.length)];
-
-}
-
 function moveImages() {
 
     imgs.forEach(Element => {
@@ -57,46 +41,45 @@ function moveImages() {
     });
 }
 
-function clickOutImage() {
+function selectRandomImg()
+{
 
-    gameArea.addEventListener("click", function (event) {
+    if(imgs.length == 0)
+    {
+        alert("Parabéns, Você ganhou")
+    }
 
-        points += 1
+    randomImg = imgs[Math.floor(Math.random() * imgs.length)];
+    var indexImage = imgs.indexOf(randomImg)
 
-        points -= 2
-        document.querySelector("#points").innerHTML = "Pontos: " + points
+    imgs.splice(indexImage, 1)
 
-    })
-
+    document.querySelector("#imgToFind").innerHTML = "Encontre o: " + randomImg.alt
 }
 
 function clickImage() {
 
-    let imgToFind = randomImg(imgs)
+    imgs.forEach(Element => {
 
-    let imgName = ""
+        Element.addEventListener('click', event => {
 
-    if (imgToFind === imgs[0]) {
-        imgName = "Chease Cake"
-    } else if (imgToFind === imgs[1]) {
-        imgName = "Bolo"
-    } else if (imgToFind === imgs[2]) {
-        imgName = "Bom Bom"
-    }
-
-    document.querySelector("#imgToFind").innerHTML = "Encontre O: " + imgName
-
-    imgToFind.addEventListener("click", function (event) {
-
-        imgToFind.parentNode.removeChild(imgToFind)
-        console.log("Acertou")
-        points += 5
-        document.querySelector("#points").innerHTML = "Pontos: " + points
-
+            if(Element == randomImg)
+            {
+                Element.parentNode.removeChild(Element)
+                selectRandomImg()
+                points += 1
+            }else {
+                alert("Você Errou!! Tente outra vez")
+                points -= 2
+            }
+            document.querySelector("#points").innerHTML = "Pontos: " + points
+            
+        })
     })
 
-}
+    selectRandomImg()
 
+}
 moveImages()
+
 clickImage()
-clickOutImage()

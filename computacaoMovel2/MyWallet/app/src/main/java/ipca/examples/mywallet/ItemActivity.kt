@@ -10,14 +10,12 @@ import kotlinx.android.synthetic.main.activity_item.*
 
 class ItemActivity : AppCompatActivity() {
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_item)
 
         val transaction = intent.getSerializableExtra("transaction") as Transaction
-
 
         textView_id.text = transaction.id
         textView_date.text = transaction.dateTime
