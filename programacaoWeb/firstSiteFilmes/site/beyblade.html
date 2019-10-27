@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="position.css" rel="stylesheet">
+    <link rel="stylesheet" href="beyblade.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="main.css" rel="stylesheet">
-    <title>Position</title>
+    <link href="input.css" rel="stylesheet"> 
+    <title>beyblade</title>
 </head>
-
 <body>
-
-    <header class="header">
+	<header class="header">
         <div class="logo">
             <a href="#inicio">
-                <!--<img src="" alt="Logo" />-->
+                <!--<img src="" alt="Logo" />--> 
             </a>
         </div>
         <nav class="menu">
@@ -50,23 +48,9 @@
             <a href="register.html" class="btnRegister contrast">Registrar</a>
         </aside>
     </header>
-
-    <div>
-        <div id="imgToFind">Encontre o: </div>
-        <div id="atempts">Tentativas: 0/3</div>
+    <div id="gameArea"></div>
+        <img id="beyblade1" src="Images\Player1.png">
     </div>
-    <div id="gameArea">
-        <img alt="Bruce Banner" src="Images/position/Hulk.png">
-        <img alt="Peter Parker" src="Images/position/SpiderMan.png">
-        <img alt="Steve Rogers" src="Images/position/CaptainAmerica.png">
-        <img alt="Tony Stark" src="Images/position/IronMan.png">
-        <img alt="Bruce Wayne" src="Images/position/Batman.png">
-        <img alt="Clark Kent" src="Images/position/SuperMan.png">
-    </div>
-    <div id="lose"></div>
-
-    <script src="position.js"></script>
-
+    <script src="beyblade.js" async defer></script>
 </body>
-
 </html>

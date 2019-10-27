@@ -3,6 +3,14 @@ body {
     background-color: lightgrey;
 }
 
+#lose img{
+    position: absolute;
+    left: 500px;
+    top: 200px;
+    width: 40vw;
+    height: 37vw;
+}
+
 #gameArea {
     margin: 0;
     background-color: gray;

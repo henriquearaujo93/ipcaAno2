@@ -1,8 +1,8 @@
 var randomImg = ""
 
-var clickOut = false
+var atempts = 0
 
-var points = 0
+var clickOut = false
 
 var imgName = ""
 
@@ -67,13 +67,29 @@ function clickImage() {
             {
                 Element.parentNode.removeChild(Element)
                 selectRandomImg()
-                points += 1
             }else {
-                alert("Você Errou!! Tente outra vez")
-                points -= 2
-            }
-            document.querySelector("#points").innerHTML = "Pontos: " + points
-            
+                if (atempts == 2)
+                {
+                    
+                    var jokerImg = document.createElement('img')
+                    jokerImg.src = "Images/position/Joker.png"
+
+                    document.getElementById("lose").appendChild(jokerImg)
+
+                    var audio = new Audio("audio/position/Joker.mp3")
+                    audio.play()
+                    alert("Você PERDEU!! HAHAHAHA!!!")
+
+                    setTimeout(function(){
+                        window.location.reload(1);
+                     }, 5000);
+
+                }else {
+                    alert("Você Errou!! Tente outra vez")
+                    atempts += 1
+                    document.querySelector("#atempts").innerHTML = "Tentativas: " + atempts + "/3"
+                }
+            }     
         })
     })
 

@@ -4,7 +4,7 @@ body {
     align-items: center;
     text-align: left;
     color: white;
-    background: linear-gradient(to right, rgb(83, 105, 118), rgb(41, 46, 73))
+    background: linear-gradient(55deg, rgb(185, 43, 39) 0%, rgb(21, 101, 192) 100%);
 }
 
 .calculator {
@@ -57,6 +57,7 @@ body {
 
 .button.double {
     grid-column: span 2;
+    height: 40px;
 }
 
 .button.triple {
