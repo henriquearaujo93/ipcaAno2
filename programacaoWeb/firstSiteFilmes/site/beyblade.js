@@ -1,34 +1,52 @@
-var beyblade1 = document.getElementById("beyblade1")
+//Guardar Jogadores
+var players = []
 
-var gameArea = document.getElementById("gameArea")
 
-var position = 0
+//Player Position
+function setPosition(playerImg, playerId){
 
-var rightKey = false
+    //Get game Area
+    var gameArea = document.getElementById("gameArea")
+
+    //Position Player
+    var img = document.createElement("img")
+    img.id = playerId
+    img.src = playerImg
+    gameArea.appendChild(img)
+
+    //Set player general Styles
+    img.style.position = "absolure"
+    img.style.width = "10vw"
+    img.style.height = "10vw"
+    img.style.userSelect = "none"
+    img.style.transitionDuration = "1s"
+    img.style.animationIterationCount = "infinite"
+    img.style.animationDuration = "15ms"
+    img.style.animationTimingFunction = "linear"
+    img.style.animationName = "rotateMe"
+
+    var gameAreaHeight = gameArea.clientHeight
+
+    img.style.marginTop = gameAreaHeight + "px"
+}
 
 function init() {
 
-    beyblade1.style.left = 200 + "px"
-    beyblade1.style.top = 200 + "px"
-}
-
-function onkeyDown(e) {
-
-    if (e.keyCode === 39){
-        beyblade1.style.left = parseInt(beyblade1.style.left) + 5 + "px"
+    //New Player
+    let player1 = {
+        id: "player1",
+        img: "Images/Player1.png"
     }
+
+    setPosition(player1.img, player1.id)
+
+    //Save player
+    players.push(player1)
+
 }
 
-function onkeyUp(e) {
-    if(e.keyCode === 39) {
-        
-    }
-}
-init()
+//init()
 
-window.addEventListener("keydown", onkeyDown)
-
-window.addEventListener("keyup", onkeyUp)
 
 
 
