@@ -10,6 +10,7 @@ body{
     margin-left: auto;
     margin-right: auto;
     margin-top: 5vh;
+    z-index: 2;
 }
 
 @keyframes rotateMe {
