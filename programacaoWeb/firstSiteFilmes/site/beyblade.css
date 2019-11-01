@@ -1,5 +1,6 @@
 body{
     background: lightgrey;
+    overflow: hidden;
 }
 
 #gameArea {
@@ -10,8 +11,20 @@ body{
     margin-left: auto;
     margin-right: auto;
     margin-top: 5vh;
-    z-index: 2;
 }
+
+#player1Result {
+    position: absolute;
+    margin-left: 10vw;
+    margin-top: 1vw;
+}
+
+#player2Result {
+    position: absolute;
+    margin-left: 87vw;
+    margin-top: 1vw;
+}
+
 
 @keyframes rotateMe {
     form {
