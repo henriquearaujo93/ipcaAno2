@@ -1,0 +1,14 @@
+- Requerimentos
+  - Reuniões e tirar dúvidas
+
+- Design
+  - Arquitetura do software
+
+- Implementação
+ - Construção do software
+
+- Verificação
+ - Instalação e testes
+
+- Manutenção
+ - Procurar erros e optimização
