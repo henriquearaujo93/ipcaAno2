@@ -78,9 +78,9 @@ class MainActivity : AppCompatActivity() {
 
             view.setOnClickListener{
 
-                    val  i = Intent(this@MainActivity, ItemActivity::class.java)
-                    i.putExtra("transaction", transaction)
-                    startActivity(i)
+                val  i = Intent(this@MainActivity, ItemActivity::class.java)
+                i.putExtra("transaction", transaction)
+                startActivity(i)
             }
 
             textViewDescription.text = transaction.description
