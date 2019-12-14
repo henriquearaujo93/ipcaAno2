@@ -1,5 +1,0 @@
-Pergunta; escolhas abcd; Guardar Pontuações; Leader Board; FireBase; Timer
-
-JQ Só para comunicação com base de dados.
-
-Resto com JavaScript

@@ -24,6 +24,14 @@
   z-index: 1;
 }
 
+.muted{
+  z-index: 5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .navbar-brand {
   left: 50%;
   position: relative;
@@ -36,14 +44,16 @@
   height: 5vh;
 }
 
-.container{
+.containerVideo{
   width: 5vh;
   height: 5vh;
   float: center;
   top: 43%;
 }
 
-.container img{
+.muted img{
+  float: center;
+  top: 43%;
   width: 5vh;
   height: 5vh;
   border-radius: 100%;
