@@ -14,25 +14,43 @@ body{
     margin-top: 5vh;
 }
 
-#rouletteImg{
-    top: 50%;
-    left: 37%;
+#wheelImg{
+    top: 12%;
+    left: -20%;
     width: 75%;
-    height: 75%;
-    position: absolute;
+    height: 70%;
     display: block;
-    background: url("images/roulette.png");
-    background-size: contain;  
+    position: absolute;
+    background: url("images/wheel.png");
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position:left;
-    transform: translate(-50%, -50%);
+    background-position:center;
+    animation-iteration-count: infinite;
+    animation-duration: 0s;
+    animation-timing-function: linear;
 }
 
-@keyframes rotateMe {
-    form {
-        transform: rotate(0deg);
-    }
+#holderWheelImg {
+    top: 21%;
+    left: -20%;
+    width: 75%;
+    height: 70%;
+    display: block;
+    position: absolute;
+    background: url("images/holderWheel.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position:center;
+}
 
+#arrowImg{
+    top: 45%;
+    left: 32%;
+    position: absolute;
+    height: 3%;
+}
+
+@keyframes rotation {
     to {
         transform: rotate(360deg);
     }
